@@ -1,0 +1,1 @@
+/home/tapati/my_ws/devel/.private/pose_goal_pkg/share/pose_goal_pkg/cmake/pose_goal_pkgConfig.cmake

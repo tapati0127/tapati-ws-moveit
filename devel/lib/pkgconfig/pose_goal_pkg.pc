@@ -1,0 +1,1 @@
+/home/tapati/my_ws/devel/.private/pose_goal_pkg/lib/pkgconfig/pose_goal_pkg.pc

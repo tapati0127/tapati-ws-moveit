@@ -1,0 +1,6 @@
+devel_space: /home/tapati/my_ws/devel
+install: false
+install_space: /home/tapati/my_ws/install
+profile: default
+source_space: /home/tapati/my_ws/src
+workspace: /home/tapati/my_ws

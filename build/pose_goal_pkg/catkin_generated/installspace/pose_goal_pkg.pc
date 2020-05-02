@@ -1,0 +1,8 @@
+prefix=/home/tapati/my_ws/install
+
+Name: pose_goal_pkg
+Description: Description of pose_goal_pkg
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp moveit_ros_planning_interface moveit_visual_tools

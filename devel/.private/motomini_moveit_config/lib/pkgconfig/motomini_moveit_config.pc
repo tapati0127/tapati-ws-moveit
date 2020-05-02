@@ -1,0 +1,8 @@
+prefix=/home/tapati/my_ws/devel/.private/motomini_moveit_config
+
+Name: motomini_moveit_config
+Description: Description of motomini_moveit_config
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

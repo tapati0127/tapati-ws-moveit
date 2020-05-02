@@ -1,0 +1,20 @@
+[01m[K/home/tapati/my_ws/src/my_control_pkg/src/my_pose_goal_node.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/tapati/my_ws/src/my_control_pkg/src/my_pose_goal_node.cpp:40:54:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmoveit::planning_interface::MoveGroupInterface::setPoseTargets(const PoseStamped&, const string&)[m[K’
+     move_group.setPoseTargets(goal_pose,END_EFFECTOR_[01;31m[K)[m[K;
+                                                      [01;31m[K^[m[K
+In file included from [01m[K/home/tapati/my_ws/src/my_control_pkg/src/my_pose_goal_node.cpp:2:0[m[K:
+[01m[K/home/tapati/ws_moveit/src/moveit/moveit_ros/planning_interface/move_group_interface/include/moveit/move_group_interface/move_group_interface.h:608:8:[m[K [01;36m[Knote: [m[Kcandidate: bool moveit::planning_interface::MoveGroupInterface::setPoseTargets(const vector_Isometry3d&, const string&)
+   bool [01;36m[KsetPoseTargets[m[K(const EigenSTL::vector_Isometry3d& end_effector_pose, const std::string& end_effector_link = "");
+        [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/tapati/ws_moveit/src/moveit/moveit_ros/planning_interface/move_group_interface/include/moveit/move_group_interface/move_group_interface.h:608:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst PoseStamped {aka const geometry_msgs::PoseStamped_<std::allocator<void> >}[m[K’ to ‘[01m[Kconst vector_Isometry3d& {aka const std::vector<Eigen::Transform<double, 3, 1>, Eigen::aligned_allocator<Eigen::Transform<double, 3, 1> > >&}[m[K’
+[01m[K/home/tapati/ws_moveit/src/moveit/moveit_ros/planning_interface/move_group_interface/include/moveit/move_group_interface/move_group_interface.h:628:8:[m[K [01;36m[Knote: [m[Kcandidate: bool moveit::planning_interface::MoveGroupInterface::setPoseTargets(const std::vector<geometry_msgs::Pose_<std::allocator<void> > >&, const string&)
+   bool [01;36m[KsetPoseTargets[m[K(const std::vector<geometry_msgs::Pose>& target, const std::string& end_effector_link = "");
+        [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/tapati/ws_moveit/src/moveit/moveit_ros/planning_interface/move_group_interface/include/moveit/move_group_interface/move_group_interface.h:628:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst PoseStamped {aka const geometry_msgs::PoseStamped_<std::allocator<void> >}[m[K’ to ‘[01m[Kconst std::vector<geometry_msgs::Pose_<std::allocator<void> > >&[m[K’
+[01m[K/home/tapati/ws_moveit/src/moveit/moveit_ros/planning_interface/move_group_interface/include/moveit/move_group_interface/move_group_interface.h:648:8:[m[K [01;36m[Knote: [m[Kcandidate: bool moveit::planning_interface::MoveGroupInterface::setPoseTargets(const std::vector<geometry_msgs::PoseStamped_<std::allocator<void> > >&, const string&)
+   bool [01;36m[KsetPoseTargets[m[K(const std::vector<geometry_msgs::PoseStamped>& target, const std::string& end_effector_link = "");
+        [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/tapati/ws_moveit/src/moveit/moveit_ros/planning_interface/move_group_interface/include/moveit/move_group_interface/move_group_interface.h:648:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst PoseStamped {aka const geometry_msgs::PoseStamped_<std::allocator<void> >}[m[K’ to ‘[01m[Kconst std::vector<geometry_msgs::PoseStamped_<std::allocator<void> > >&[m[K’
+make[2]: *** [CMakeFiles/my_pose_goal_node.dir/src/my_pose_goal_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/my_pose_goal_node.dir/all] Error 2
+make: *** [all] Error 2

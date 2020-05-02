@@ -1,0 +1,8 @@
+prefix=/home/tapati/my_ws/devel/.private/my_control_pkg
+
+Name: my_control_pkg
+Description: Description of my_control_pkg
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: moveit_ros_planning_interface roscpp geometry_msgs moveit_visual_tools visualization_msgs rviz_visual_tools

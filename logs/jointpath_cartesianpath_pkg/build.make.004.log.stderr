@@ -1,0 +1,11 @@
+[01m[K/home/tapati/my_ws/src/jointpath_cartesianpath_pkg/src/cartesian_path_node.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/tapati/my_ws/src/jointpath_cartesianpath_pkg/src/cartesian_path_node.cpp:52:123:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdouble moveit::core::RobotState::computeCartesianPath(const moveit::core::JointModelGroup*, std::vector<std::shared_ptr<moveit::core::RobotState> >&, const moveit::core::LinkModel*, const Vector3d&, bool, double, double, double, const GroupStateValidityCallbackFn&, const kinematics::KinematicsQueryOptions&)[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+   (motomini_joint_group,motomini_state_ptr_,motomini_model_ptr->getLinkModel("tool0"),direction,true,distance,maxstep,jump[01;35m[K)[m[K;
+                                                                                                                           [01;35m[K^[m[K
+In file included from [01m[K/home/tapati/ws_moveit/src/moveit/moveit_core/planning_scene/include/moveit/planning_scene/planning_scene.h:40:0[m[K,
+                 from [01m[K/home/tapati/ws_moveit/src/moveit/moveit_ros/planning/planning_scene_monitor/include/moveit/planning_scene_monitor/planning_scene_monitor.h:43[m[K,
+                 from [01m[K/home/tapati/ws_moveit/src/moveit_visual_tools/include/moveit_visual_tools/moveit_visual_tools.h:47[m[K,
+                 from [01m[K/home/tapati/my_ws/src/jointpath_cartesianpath_pkg/src/cartesian_path_node.cpp:3[m[K:
+[01m[K/home/tapati/ws_moveit/src/moveit/moveit_core/robot_state/include/moveit/robot_state/robot_state.h:1114:3:[m[K [01;36m[Knote: [m[Kdeclared here
+   [01;36m[KcomputeCartesianPath[m[K(const JointModelGroup* group, std::vector<RobotStatePtr>& traj, const LinkModel* link,
+   [01;36m[K^~~~~~~~~~~~~~~~~~~~[m[K

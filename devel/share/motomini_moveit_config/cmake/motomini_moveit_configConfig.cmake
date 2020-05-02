@@ -1,0 +1,1 @@
+/home/tapati/my_ws/devel/.private/motomini_moveit_config/share/motomini_moveit_config/cmake/motomini_moveit_configConfig.cmake

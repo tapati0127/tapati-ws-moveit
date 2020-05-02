@@ -1,0 +1,6 @@
+pose_goal_pkg
+/home/tapati/my_ws/devel/.private/pose_goal_pkg/cmake.lock /home/tapati/my_ws/devel/./cmake.lock
+/home/tapati/my_ws/devel/.private/pose_goal_pkg/lib/pkgconfig/pose_goal_pkg.pc /home/tapati/my_ws/devel/lib/pkgconfig/pose_goal_pkg.pc
+/home/tapati/my_ws/devel/.private/pose_goal_pkg/lib/pose_goal_pkg/pose_goal_node /home/tapati/my_ws/devel/lib/pose_goal_pkg/pose_goal_node
+/home/tapati/my_ws/devel/.private/pose_goal_pkg/share/pose_goal_pkg/cmake/pose_goal_pkgConfig-version.cmake /home/tapati/my_ws/devel/share/pose_goal_pkg/cmake/pose_goal_pkgConfig-version.cmake
+/home/tapati/my_ws/devel/.private/pose_goal_pkg/share/pose_goal_pkg/cmake/pose_goal_pkgConfig.cmake /home/tapati/my_ws/devel/share/pose_goal_pkg/cmake/pose_goal_pkgConfig.cmake

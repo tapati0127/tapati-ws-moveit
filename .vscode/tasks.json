@@ -1,0 +1,77 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "pose_goal_debug",
+            "type": "shell",
+            "command": "catkin build pose_goal_pkg -DCMAKE_BUILD_TYPE=Debug",
+            "args": [
+                //"--cmake-args -DCMAKE_BUILD_TYPE=Debug"
+                //"-DCMAKE_BUILD_TYPE=Debug"
+                // "-j4",
+                // "-DCMAKE_BUILD_TYPE=Release",
+                // "-DCMAKE_EXPORT_COMPILE_COMMANDS=1",
+                // "-DCMAKE_CXX_STANDARD=14"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "pose_goal",
+            "type": "shell",
+            "command": "catkin build pose_goal_pkg",
+            "args": [
+                //"--cmake-args -DCMAKE_BUILD_TYPE=Debug"
+                //"-DCMAKE_BUILD_TYPE=Debug"
+                // "-j4",
+                // "-DCMAKE_BUILD_TYPE=Release",
+                // "-DCMAKE_EXPORT_COMPILE_COMMANDS=1",
+                // "-DCMAKE_CXX_STANDARD=14"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "debug_joint_cartesian",
+            "type": "shell",
+            "command": "catkin build jointpath_cartesianpath_pkg -DCMAKE_BUILD_TYPE=Debug",
+            "args": [
+                //"--cmake-args -DCMAKE_BUILD_TYPE=Debug"
+                //"-DCMAKE_BUILD_TYPE=Debug"
+                // "-j4",
+                // "-DCMAKE_BUILD_TYPE=Release",
+                // "-DCMAKE_EXPORT_COMPILE_COMMANDS=1",
+                // "-DCMAKE_CXX_STANDARD=14"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "joint_cartesian",
+            "type": "shell",
+            "command": "catkin build jointpath_cartesianpath_pkg",
+            "args": [
+                //"--cmake-args -DCMAKE_BUILD_TYPE=Debug"
+                //"-DCMAKE_BUILD_TYPE=Debug"
+                // "-j4",
+                // "-DCMAKE_BUILD_TYPE=Release",
+                // "-DCMAKE_EXPORT_COMPILE_COMMANDS=1",
+                // "-DCMAKE_CXX_STANDARD=14"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}

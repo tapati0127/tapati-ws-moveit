@@ -1,0 +1,6 @@
+[31m[1mCMake Error[0m at /home/tapati/my_ws/src/my_control_pkg/CMakeLists.txt:168 (target_link_libraries):
+  Cannot specify link libraries for target "my_pose_goal_node" which is not
+  built by this project.
+
+
+make: *** [cmake_check_build_system] Error 1

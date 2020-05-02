@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/tapati/my_ws/devel/.private/my_control_pkg/setup.sh

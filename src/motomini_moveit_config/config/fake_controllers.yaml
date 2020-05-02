@@ -1,0 +1,15 @@
+controller_list:
+  - name: fake_moto_mini_controller
+    joints:
+      - joint_1_s
+      - joint_2_l
+      - joint_3_u
+      - joint_4_r
+      - joint_5_b
+      - joint_6_t
+  - name: fake_end_effector_controller
+    joints:
+      []
+initial:  # Define initial robot poses.
+  - group: moto_mini
+    pose: home

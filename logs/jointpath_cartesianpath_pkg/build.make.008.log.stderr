@@ -1,0 +1,18 @@
+[01m[K/home/tapati/my_ws/src/jointpath_cartesianpath_pkg/src/cartesian_path_node.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/tapati/my_ws/src/jointpath_cartesianpath_pkg/src/cartesian_path_node.cpp:16:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kbconst[m[K’ was not declared in this scope
+   [01;31m[Kbconst[m[K std::string PLANNING_GROUP ("moto_mini");
+   [01;31m[K^~~~~~[m[K
+[01m[K/home/tapati/my_ws/src/jointpath_cartesianpath_pkg/src/cartesian_path_node.cpp:16:3:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kbcopy[m[K’
+   [01;36m[Kbconst[m[K std::string PLANNING_GROUP ("moto_mini");
+   [01;36m[K^~~~~~[m[K
+   [32m[Kbcopy[m[K
+[01m[K/home/tapati/my_ws/src/jointpath_cartesianpath_pkg/src/cartesian_path_node.cpp:26:95:[m[K [01;31m[Kerror: [m[K‘[01m[KPLANNING_GROUP[m[K’ was not declared in this scope
+   robot_state::JointModelGroup* motomini_joint_group = motomini_model_ptr->getJointModelGroup([01;31m[KPLANNING_GROUP[m[K);
+                                                                                               [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/tapati/my_ws/src/jointpath_cartesianpath_pkg/src/cartesian_path_node.cpp:26:95:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[KCLONE_NEWCGROUP[m[K’
+   robot_state::JointModelGroup* motomini_joint_group = motomini_model_ptr->getJointModelGroup([01;36m[KPLANNING_GROUP[m[K);
+                                                                                               [01;36m[K^~~~~~~~~~~~~~[m[K
+                                                                                               [32m[KCLONE_NEWCGROUP[m[K
+make[2]: *** [CMakeFiles/cartesian_path_node.dir/src/cartesian_path_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/cartesian_path_node.dir/all] Error 2
+make: *** [all] Error 2
