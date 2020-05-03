@@ -1,0 +1,14 @@
+[01m[K/home/tapati/my_ws/src/collision_plan_pkg/src/collision_plan_node.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/tapati/my_ws/src/collision_plan_pkg/src/collision_plan_node.cpp:186:46:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kplanning_scene::PlanningScene::getCurrentStateUpdated()[m[K’
+   motomini_scene_ptr->getCurrentStateUpdated([01;31m[K)[m[K;
+                                              [01;31m[K^[m[K
+In file included from [01m[K/home/tapati/ws_moveit/src/moveit/moveit_ros/planning/planning_scene_monitor/include/moveit/planning_scene_monitor/planning_scene_monitor.h:43:0[m[K,
+                 from [01m[K/home/tapati/ws_moveit/src/moveit_visual_tools/include/moveit_visual_tools/moveit_visual_tools.h:47[m[K,
+                 from [01m[K/home/tapati/my_ws/src/collision_plan_pkg/src/collision_plan_node.cpp:3[m[K:
+[01m[K/home/tapati/ws_moveit/src/moveit/moveit_core/planning_scene/include/moveit/planning_scene/planning_scene.h:157:31:[m[K [01;36m[Knote: [m[Kcandidate: moveit::core::RobotStatePtr planning_scene::PlanningScene::getCurrentStateUpdated(const RobotState&) const
+   moveit::core::RobotStatePtr [01;36m[KgetCurrentStateUpdated[m[K(const moveit_msgs::RobotState& update) const;
+                               [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/tapati/ws_moveit/src/moveit/moveit_core/planning_scene/include/moveit/planning_scene/planning_scene.h:157:31:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+make[2]: *** [CMakeFiles/collision_plan_node.dir/src/collision_plan_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/collision_plan_node.dir/all] Error 2
+make: *** [all] Error 2

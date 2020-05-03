@@ -6,6 +6,7 @@
 #include <tf2_geometry_msgs/tf2_geometry_msgs.h>
 #include<eigen_conversions/eigen_msg.h>
 #include<moveit_msgs/GetMotionPlan.h>
+#include<moveit_msgs/ApplyPlanningScene.h>
 #include<moveit/robot_state/conversions.h>
 
 int main(int argc,char** argv)
@@ -100,13 +101,10 @@ int main(int argc,char** argv)
   motomini_visual_tools.prompt("Next");
   motomini_visual_tools.deleteAllMarkers();
   motomini_visual_tools.trigger();
-  // Advertise the required topic
-  ros::Publisher planning_scene_publisher = nh.advertise<moveit_msgs::PlanningScene>("planning_scene", 1);
-  ros::WallDuration sleep_t(0.5);
-  while (planning_scene_publisher.getNumSubscribers() < 1)
-  {
-    sleep_t.sleep();
-  }
+
+  ros::ServiceClient planning_scene_diff_client = nh.serviceClient<moveit_msgs::ApplyPlanningScene>("apply_planning_scene");
+  planning_scene_diff_client.waitForExistence();
+  moveit_msgs::ApplyPlanningScene srv_planning_scene;
   //First define object
   moveit_msgs::AttachedCollisionObject attached_object;
   attached_object.link_name = END_EFFECTOR;
@@ -140,8 +138,8 @@ int main(int argc,char** argv)
   moveit_msgs::PlanningScene planning_scene_msg;
   planning_scene_msg.world.collision_objects.push_back(attached_object.object);
   planning_scene_msg.is_diff = true;
-
-  planning_scene_publisher.publish(planning_scene_msg);
+  srv_planning_scene.request.scene = planning_scene_msg;
+  planning_scene_diff_client.call(srv_planning_scene);
   motomini_visual_tools.prompt("Next");
 
   //motomini_visual_tools.trigger();
@@ -179,14 +177,20 @@ int main(int argc,char** argv)
   planning_scene_msg.world.collision_objects.clear();
   planning_scene_msg.world.collision_objects.push_back(remove_object);
   planning_scene_msg.robot_state.attached_collision_objects.push_back(attached_object);
-  planning_scene_publisher.publish(planning_scene_msg);
+  planning_scene_msg.robot_state.is_diff = true;
+  srv_planning_scene.request.scene = planning_scene_msg;
+  planning_scene_diff_client.call(srv_planning_scene);
 
   motomini_visual_tools.prompt("Next");
+  motomini_scene_ptr->getCurrentStateUpdated(start_state_msg);
+  
+  //robot_state::robotStateToRobotStateMsg(*motomini_state_ptr.get(),start_state_msg);
+  srv.request.motion_plan_request.start_state = start_state_msg;
   //OK the object was attached to the robot, now we plan the robot again
   client.call(srv);
   //Publish Text, Trajectory Line and the Planning Result
   display_traj.trajectory_start = srv.response.motion_plan_response.trajectory_start;
-  display_traj.model_id = motomini_model_ptr->getName();
+  display_traj.model_id = motomini_model_loader.getModel()->getName();
   display_traj.trajectory.clear();
   display_traj.trajectory.push_back(srv.response.motion_plan_response.trajectory);
   motomini_visual_tools.publishText(text_pose,"Collision-free!",rviz_visual_tools::BLUE,rviz_visual_tools::LARGE);

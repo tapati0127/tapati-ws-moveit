@@ -5,6 +5,9 @@ CMakeFiles/collision_plan_node.dir/src/collision_plan_node.cpp.o
  /home/tapati/my_ws/src/collision_plan_pkg/src/collision_plan_node.cpp
  /home/tapati/ws_moveit/devel/.private/moveit_msgs/include/moveit_msgs/AllowedCollisionEntry.h
  /home/tapati/ws_moveit/devel/.private/moveit_msgs/include/moveit_msgs/AllowedCollisionMatrix.h
+ /home/tapati/ws_moveit/devel/.private/moveit_msgs/include/moveit_msgs/ApplyPlanningScene.h
+ /home/tapati/ws_moveit/devel/.private/moveit_msgs/include/moveit_msgs/ApplyPlanningSceneRequest.h
+ /home/tapati/ws_moveit/devel/.private/moveit_msgs/include/moveit_msgs/ApplyPlanningSceneResponse.h
  /home/tapati/ws_moveit/devel/.private/moveit_msgs/include/moveit_msgs/AttachedCollisionObject.h
  /home/tapati/ws_moveit/devel/.private/moveit_msgs/include/moveit_msgs/BoundingVolume.h
  /home/tapati/ws_moveit/devel/.private/moveit_msgs/include/moveit_msgs/CartesianPoint.h
