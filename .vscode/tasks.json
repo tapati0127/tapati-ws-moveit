@@ -6,12 +6,6 @@
             "type": "shell",
             "command": "catkin build pose_goal_pkg -DCMAKE_BUILD_TYPE=Debug",
             "args": [
-                //"--cmake-args -DCMAKE_BUILD_TYPE=Debug"
-                //"-DCMAKE_BUILD_TYPE=Debug"
-                // "-j4",
-                // "-DCMAKE_BUILD_TYPE=Release",
-                // "-DCMAKE_EXPORT_COMPILE_COMMANDS=1",
-                // "-DCMAKE_CXX_STANDARD=14"
             ],
             "problemMatcher": [],
             "group": {
@@ -24,12 +18,6 @@
             "type": "shell",
             "command": "catkin build pose_goal_pkg",
             "args": [
-                //"--cmake-args -DCMAKE_BUILD_TYPE=Debug"
-                //"-DCMAKE_BUILD_TYPE=Debug"
-                // "-j4",
-                // "-DCMAKE_BUILD_TYPE=Release",
-                // "-DCMAKE_EXPORT_COMPILE_COMMANDS=1",
-                // "-DCMAKE_CXX_STANDARD=14"
             ],
             "problemMatcher": [],
             "group": {
@@ -42,12 +30,6 @@
             "type": "shell",
             "command": "catkin build jointpath_cartesianpath_pkg -DCMAKE_BUILD_TYPE=Debug",
             "args": [
-                //"--cmake-args -DCMAKE_BUILD_TYPE=Debug"
-                //"-DCMAKE_BUILD_TYPE=Debug"
-                // "-j4",
-                // "-DCMAKE_BUILD_TYPE=Release",
-                // "-DCMAKE_EXPORT_COMPILE_COMMANDS=1",
-                // "-DCMAKE_CXX_STANDARD=14"
             ],
             "problemMatcher": [],
             "group": {
@@ -59,14 +41,29 @@
             "label": "joint_cartesian",
             "type": "shell",
             "command": "catkin build jointpath_cartesianpath_pkg",
-            "args": [
-                //"--cmake-args -DCMAKE_BUILD_TYPE=Debug"
-                //"-DCMAKE_BUILD_TYPE=Debug"
-                // "-j4",
-                // "-DCMAKE_BUILD_TYPE=Release",
-                // "-DCMAKE_EXPORT_COMPILE_COMMANDS=1",
-                // "-DCMAKE_CXX_STANDARD=14"
-            ],
+            "args":[],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "conllision",
+            "type": "shell",
+            "command": "catkin build collision_plan_pkg",
+            "args":[],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "conllision debug",
+            "type": "shell",
+            "command": "catkin build collision_plan_pkg -DCMAKE_BUILD_TYPE=Debug",
+            "args":[],
             "problemMatcher": [],
             "group": {
                 "kind": "build",

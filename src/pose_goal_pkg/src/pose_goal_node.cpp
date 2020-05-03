@@ -17,6 +17,7 @@ int main(int argc,char** argv)
 
     const std::string PLANNING_GROUP ("moto_mini");
     const std::string BASE_FRAME ("base_link");
+    const std::string END_EFFECTOR ("tool0");
 
     //Use RobotModelLoader to look up the robot description
     robot_model_loader::RobotModelLoader motomini_model_loader("robot_description");
@@ -103,7 +104,7 @@ int main(int argc,char** argv)
   //We need to pass the planning group and the goal condtraints to our request.
   req.group_name = PLANNING_GROUP;
   req.allowed_planning_time = 5.0;
-  moveit_msgs::Constraints pose_goal = kinematic_constraints::constructGoalConstraints("tool0",pose_stamped); 
+  moveit_msgs::Constraints pose_goal = kinematic_constraints::constructGoalConstraints(END_EFFECTOR,pose_stamped); 
   req.goal_constraints.push_back(pose_goal);
 
   //Make a Motion Plan response
@@ -131,7 +132,7 @@ int main(int argc,char** argv)
   display_traj.trajectory.push_back(res_msg.trajectory);
   motomini_visual_tools.publishText(text_pose,"Pose goal!",rviz_visual_tools::BLUE,rviz_visual_tools::LARGE);
   motomini_visual_tools.publishAxisLabeled(pose_stamped.pose,"Pose goal 1");
-  motomini_visual_tools.publishTrajectoryLine(display_traj.trajectory.back(),motomini_joint_group);
+  motomini_visual_tools.publishTrajectoryLine(display_traj.trajectory.back(),motomini_model_ptr->getLinkModel(END_EFFECTOR),motomini_joint_group);
   motomini_visual_tools.trigger();
   display_pub.publish(display_traj);
 
@@ -155,16 +156,17 @@ int main(int argc,char** argv)
 
   //This step is the same above
   motomini_visual_tools.publishAxisLabeled(pose_stamped.pose,"Pose goal 2");
-  pose_goal = kinematic_constraints::constructGoalConstraints("tool0",pose_stamped); 
+  pose_goal = kinematic_constraints::constructGoalConstraints(END_EFFECTOR,pose_stamped); 
   req.goal_constraints.clear();
   req.goal_constraints.push_back(pose_goal);
   context_ptr = planner_instance->getPlanningContext(motomini_scene_ptr,req,res.error_code_);
   context_ptr->solve(res);
   res.getMessage(res_msg);
   display_traj.trajectory.push_back(res_msg.trajectory);
-  motomini_visual_tools.publishTrajectoryLine(display_traj.trajectory.back(),motomini_joint_group);
+  motomini_visual_tools.publishTrajectoryLine(display_traj.trajectory.back(),motomini_model_ptr->getLinkModel(END_EFFECTOR),motomini_joint_group);
   motomini_visual_tools.trigger();
   display_pub.publish(display_traj);
 
+  motomini_visual_tools.prompt("Press Next to continue !");
   return 0;   
 }
