@@ -7,7 +7,7 @@
         {
             "name": "ROS: Attach",
             "type": "ros",
-            "request": "attach",
+            "request": "attach"
         },
 
         {

@@ -2,8 +2,8 @@
 #include<moveit/robot_model_loader/robot_model_loader.h>
 #include<moveit_visual_tools/moveit_visual_tools.h>
 #include<moveit/planning_interface/planning_interface.h>
-#include <moveit/kinematic_constraints/utils.h>
-#include <tf2_geometry_msgs/tf2_geometry_msgs.h>
+#include<moveit/kinematic_constraints/utils.h>
+#include<tf2_geometry_msgs/tf2_geometry_msgs.h>
 #include<eigen_conversions/eigen_msg.h>
 #include<moveit_msgs/GetMotionPlan.h>
 #include<moveit_msgs/ApplyPlanningScene.h>
@@ -114,21 +114,21 @@ int main(int argc,char** argv)
   // A default pose
   geometry_msgs::Pose pose;
   pose.orientation.w = 1.0;
-
+  pose.position.z = 0.02;
   /* Define a box to be attached */
   shape_msgs::SolidPrimitive primitive;
   primitive.type = primitive.BOX;
   primitive.dimensions.resize(3);
-  primitive.dimensions[0] = 0.04;
+  primitive.dimensions[0] = 0.08;
   primitive.dimensions[1] = 0.04;
-  primitive.dimensions[2] = 0.04;
+  primitive.dimensions[2] = 0.045;
 
   attached_object.object.primitives.push_back(primitive);
   attached_object.object.primitive_poses.push_back(pose);
 
   // Since we are attaching the object to the robot hand to simulate picking up the object,
   // we want the collision checker to ignore collisions between the object and the robot hand.
-  attached_object.touch_links = std::vector<std::string>{"tool0"};
+  attached_object.touch_links = std::vector<std::string>{"tool0","link_6_t"};
   // Note that attaching an object to the robot requires
   // the corresponding operation to be specified as an ADD operation.
   attached_object.object.operation = attached_object.object.ADD;
@@ -182,15 +182,57 @@ int main(int argc,char** argv)
   planning_scene_diff_client.call(srv_planning_scene);
 
   motomini_visual_tools.prompt("Next");
-  motomini_scene_ptr->getCurrentStateUpdated(start_state_msg);
-  
-  //robot_state::robotStateToRobotStateMsg(*motomini_state_ptr.get(),start_state_msg);
+  //Update the robot state message
+  start_state_msg.attached_collision_objects=planning_scene_msg.robot_state.attached_collision_objects;
   srv.request.motion_plan_request.start_state = start_state_msg;
   //OK the object was attached to the robot, now we plan the robot again
   client.call(srv);
   //Publish Text, Trajectory Line and the Planning Result
   display_traj.trajectory_start = srv.response.motion_plan_response.trajectory_start;
-  display_traj.model_id = motomini_model_loader.getModel()->getName();
+  //display_traj.model_id = motomini_model_loader.getModel()->getName();
+  display_traj.trajectory.clear();
+  display_traj.trajectory.push_back(srv.response.motion_plan_response.trajectory);
+  motomini_visual_tools.publishText(text_pose,"Collision-free!",rviz_visual_tools::BLUE,rviz_visual_tools::LARGE);
+  motomini_visual_tools.publishAxisLabeled(stamped_start.pose,"Start");
+  motomini_visual_tools.publishAxisLabeled(stamped_goal.pose,"Goal");
+  motomini_visual_tools.publishTrajectoryLine(display_traj.trajectory.back(),motomini_model_ptr->getLinkModel(END_EFFECTOR),motomini_joint_group);
+  motomini_visual_tools.trigger();
+  display_pub.publish(display_traj);
+
+  /*Add new object to the environment and plan */
+  motomini_visual_tools.prompt("Next");
+  motomini_visual_tools.deleteAllMarkers();
+  motomini_visual_tools.trigger();
+
+  moveit_msgs::CollisionObject table;
+  table.header.frame_id = "tool0";
+  table.id = "table";
+
+   // A default pose
+  geometry_msgs::Pose pose_table;
+  pose_table.orientation.w = 1.0;
+  pose_table.position.z = 0.14;
+  /* Define a box to be attached */
+  shape_msgs::SolidPrimitive primitive_table;
+  primitive_table.type = primitive.BOX;
+  primitive_table.dimensions.resize(3);
+  primitive_table.dimensions[0] = 0.04;
+  primitive_table.dimensions[1] = 0.04;
+  primitive_table.dimensions[2] = 0.3;
+  table.primitives.push_back(primitive_table);
+  table.primitive_poses.push_back(pose_table);
+  table.operation = table.ADD;
+
+  planning_scene_msg.world.collision_objects.clear();
+  planning_scene_msg.world.collision_objects.push_back(table);
+  planning_scene_msg.is_diff = true;
+  srv_planning_scene.request.scene = planning_scene_msg;
+  planning_scene_diff_client.call(srv_planning_scene);
+  motomini_visual_tools.prompt("End");
+  client.call(srv);
+  //Publish Text, Trajectory Line and the Planning Result
+  display_traj.trajectory_start = srv.response.motion_plan_response.trajectory_start;
+  //display_traj.model_id = motomini_model_loader.getModel()->getName();
   display_traj.trajectory.clear();
   display_traj.trajectory.push_back(srv.response.motion_plan_response.trajectory);
   motomini_visual_tools.publishText(text_pose,"Collision-free!",rviz_visual_tools::BLUE,rviz_visual_tools::LARGE);
