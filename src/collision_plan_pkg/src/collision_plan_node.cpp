@@ -241,5 +241,15 @@ int main(int argc,char** argv)
   motomini_visual_tools.publishTrajectoryLine(display_traj.trajectory.back(),motomini_model_ptr->getLinkModel(END_EFFECTOR),motomini_joint_group);
   motomini_visual_tools.trigger();
   display_pub.publish(display_traj);
+
+  std::ofstream joints;
+  joints.open("/home/tapati/my_ws/src/collision_plan_pkg/joint_values.txt");
+  if (joints.is_open())
+  {
+    joints << srv.response.motion_plan_response.trajectory << std::endl;
+    ROS_INFO("File 'joint_values.txt' has been writen successfully.");
+  }
+  else ROS_ERROR ("File 'joint_values.txt' couldn't be opened!");
+  joints.close();
   return 0;   
 }

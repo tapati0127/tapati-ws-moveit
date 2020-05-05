@@ -94,19 +94,18 @@ int main(int argc,char** argv)
   motomini_visual_tools.publishTrajectoryLine(srv.response.solution,motomini_model_ptr->getLinkModel("tool0"),motomini_joint_group);
   motomini_visual_tools.trigger();
 
-  // std::vector <robot_state::RobotStatePtr> motomini_state_ptr_vector;
-  // for(int i = 0; i <  srv.response.solution.joint_trajectory.points.size();i++)
-  // {
-    // motomini_state_ptr->setJointGroupPositions(motomini_joint_group,srv.response.solution.joint_trajectory.points.at(i).positions);
-    // motomini_state_ptr_vector.push_back(motomini_state_ptr);
-  // }
-    // 
-  // bool a = motomini_visual_tools.publishTrajectoryPoints(motomini_state_ptr_vector,motomini_model_ptr->getLinkModel("tool0"));
-  // motomini_visual_tools.trigger();
+  std::ofstream joints;
+  joints.open("/home/tapati/my_ws/src/jointpath_cartesianpath_pkg/joint_values.txt");
+  if (joints.is_open())
+  {
+    joints << srv.response.solution;
+    ROS_INFO("File 'joint_values.txt' has been writen successfully.");
+  }
+  else ROS_ERROR ("File 'joint_values.txt' couldn't be opened!");
 
-    
 
-  
+  joints.close();
+
 
   return 0;   
 }

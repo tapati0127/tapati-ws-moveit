@@ -168,5 +168,18 @@ int main(int argc,char** argv)
   display_pub.publish(display_traj);
 
   motomini_visual_tools.prompt("Press Next to continue !");
+  std::ofstream joints;
+  joints.open("/home/tapati/my_ws/src/pose_goal_pkg/joint_values.txt");
+  if (joints.is_open())
+  {
+    for(int i = 0;i < display_traj.trajectory.size();i++)
+        joints << display_traj.trajectory.at(i);
+    ROS_INFO("File 'joint_values.txt' has been writen successfully.");
+  }
+  else ROS_ERROR ("File 'joint_values.txt' couldn't be opened!");
+    
+    
+  joints.close();
+
   return 0;   
 }
