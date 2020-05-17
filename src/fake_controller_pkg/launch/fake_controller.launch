@@ -1,0 +1,8 @@
+<launch>
+
+  <node name="fake_controler" pkg="fake_controller_pkg" type="fake_controller_node" respawn="false" output="screen">
+  </node>
+   <node name="visual" pkg="fake_controller_pkg" type="visual_node" respawn="false" output="screen">
+ </node>
+
+</launch>

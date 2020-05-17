@@ -1,0 +1,8 @@
+prefix=/home/tapati/my_ws/install
+
+Name: fake_controller_pkg
+Description: Description of fake_controller_pkg
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp

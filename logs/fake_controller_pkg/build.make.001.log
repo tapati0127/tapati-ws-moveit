@@ -1,0 +1,19 @@
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target rosgraph_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target roscpp_generate_messages_cpp
+[  0%] Built target roscpp_generate_messages_eus
+[  0%] Built target roscpp_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target roscpp_generate_messages_nodejs
+[  0%] Built target roscpp_generate_messages_py
+[  0%] Built target rosgraph_msgs_generate_messages_cpp
+[  0%] Built target rosgraph_msgs_generate_messages_eus
+[  0%] Built target rosgraph_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target rosgraph_msgs_generate_messages_py
+[35m[1mScanning dependencies of target fake_controller_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/fake_controller_node.dir/src/fake_controller_node.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/tapati/my_ws/devel/.private/fake_controller_pkg/lib/fake_controller_pkg/fake_controller_node[0m
+[100%] Built target fake_controller_node
