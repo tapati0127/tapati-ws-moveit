@@ -39,21 +39,6 @@ Not searching for unused variables given on the command line.
 [36m--[0m catkin 0.7.23
 [36m--[0m BUILD_SHARED_LIBS is on
 [36m--[0m Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
-[31m[1mCMake Error[0m at /home/tapati/my_ws/src/collision_plan_pkg/CMakeLists.txt:146 (add_dependencies):
-  Cannot add target-level dependencies to non-existent target
-  "collision_plan_node".
-
-  The add_dependencies works for top-level logical targets created by the
-  add_executable, add_library, or add_custom_target commands.  If you want to
-  add file-level dependencies see the DEPENDS option of the add_custom_target
-  and add_custom_command commands.
-
-
-[31m[1mCMake Error[0m at /home/tapati/my_ws/src/collision_plan_pkg/CMakeLists.txt:149 (target_link_libraries):
-  Cannot specify link libraries for target "collision_plan_node" which is not
-  built by this project.
-
-
-[36m--[0m Configuring incomplete, errors occurred!
-See also "/home/tapati/my_ws/build/collision_plan_pkg/CMakeFiles/CMakeOutput.log".
-See also "/home/tapati/my_ws/build/collision_plan_pkg/CMakeFiles/CMakeError.log".
+[36m--[0m Configuring done
+[36m--[0m Generating done
+[36m--[0m Build files have been written to: /home/tapati/my_ws/build/collision_plan_pkg

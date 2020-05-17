@@ -8,8 +8,6 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/tapati/my_ws/devel/.private/jointpath_cartesianpath_pkg:$CMAKE_PREFIX_PATH"
-export LD_LIBRARY_PATH="/home/tapati/my_ws/devel/.private/jointpath_cartesianpath_pkg/lib:$LD_LIBRARY_PATH"
-export PKG_CONFIG_PATH="/home/tapati/my_ws/devel/.private/jointpath_cartesianpath_pkg/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD="/home/tapati/my_ws/build/jointpath_cartesianpath_pkg"
 export ROSLISP_PACKAGE_DIRECTORIES="/home/tapati/my_ws/devel/.private/jointpath_cartesianpath_pkg/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
 export ROS_PACKAGE_PATH="/home/tapati/my_ws/src/jointpath_cartesianpath_pkg:$ROS_PACKAGE_PATH"

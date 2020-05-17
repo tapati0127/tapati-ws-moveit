@@ -1,0 +1,4 @@
+Symlinking /home/tapati/my_ws/devel/lib/pkgconfig/pose_goal_pkg.pc
+Symlinking /home/tapati/my_ws/devel/lib/pose_goal_pkg/pose_goal_node
+Symlinking /home/tapati/my_ws/devel/share/pose_goal_pkg/cmake/pose_goal_pkgConfig-version.cmake
+Symlinking /home/tapati/my_ws/devel/share/pose_goal_pkg/cmake/pose_goal_pkgConfig.cmake

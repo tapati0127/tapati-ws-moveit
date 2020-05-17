@@ -1,0 +1,4 @@
+Symlinking /home/tapati/my_ws/devel/lib/pkgconfig/collision_plan_pkg.pc
+Symlinking /home/tapati/my_ws/devel/lib/collision_plan_pkg/collision_plan_node
+Symlinking /home/tapati/my_ws/devel/share/collision_plan_pkg/cmake/collision_plan_pkgConfig-version.cmake
+Symlinking /home/tapati/my_ws/devel/share/collision_plan_pkg/cmake/collision_plan_pkgConfig.cmake

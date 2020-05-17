@@ -185,7 +185,7 @@ foreach(t ${fake_controller_pkg_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "roscpp")
+set(depends "roscpp;moveit_visual_tools")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls

@@ -1,6 +1,6 @@
-[  0%] Built target std_msgs_generate_messages_lisp
 [  0%] Built target rosgraph_msgs_generate_messages_nodejs
 [  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_lisp
 [  0%] Built target std_msgs_generate_messages_cpp
 [  0%] Built target roscpp_generate_messages_cpp
 [  0%] Built target roscpp_generate_messages_eus
@@ -13,7 +13,16 @@
 [  0%] Built target rosgraph_msgs_generate_messages_lisp
 [  0%] Built target std_msgs_generate_messages_eus
 [  0%] Built target rosgraph_msgs_generate_messages_py
-[35m[1mScanning dependencies of target fake_controller_node[0m
-[ 50%] [32mBuilding CXX object CMakeFiles/fake_controller_node.dir/src/fake_controller_node.cpp.o[0m
-[100%] [32m[1mLinking CXX executable /home/tapati/my_ws/devel/.private/fake_controller_pkg/lib/fake_controller_pkg/fake_controller_node[0m
-[100%] Built target fake_controller_node
+[35m[1mScanning dependencies of target visual_node[0m
+[ 50%] Built target fake_controller_node
+[ 75%] [32mBuilding CXX object CMakeFiles/visual_node.dir/src/visual_node.cpp.o[0m
+[01m[K/home/tapati/my_ws/src/fake_controller_pkg/src/visual_node.cpp:3:10:[m[K [01;31m[Kfatal error: [m[Kmoveit_visual_tools/moveit_visual_tools.h: No such file or directory
+ #include [01;31m[K<moveit_visual_tools/moveit_visual_tools.h>[m[K
+          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+CMakeFiles/visual_node.dir/build.make:62: recipe for target 'CMakeFiles/visual_node.dir/src/visual_node.cpp.o' failed
+make[2]: *** [CMakeFiles/visual_node.dir/src/visual_node.cpp.o] Error 1
+CMakeFiles/Makefile2:81: recipe for target 'CMakeFiles/visual_node.dir/all' failed
+make[1]: *** [CMakeFiles/visual_node.dir/all] Error 2
+Makefile:140: recipe for target 'all' failed
+make: *** [all] Error 2

@@ -1,7 +1,0 @@
-[01m[K/home/tapati/my_ws/src/my_control_pkg/src/my_control_node_1.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
-[01m[K/home/tapati/my_ws/src/my_control_pkg/src/my_control_node_1.cpp:100:71:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K)[m[K’ token
-  for(int i = 0;i<myplan.trajectory_.joint_trajectory.points.size(),i++[01;31m[K)[m[K
-                                                                       [01;31m[K^[m[K
-make[2]: *** [CMakeFiles/my_control_node_1.dir/src/my_control_node_1.cpp.o] Error 1
-make[1]: *** [CMakeFiles/my_control_node_1.dir/all] Error 2
-make: *** [all] Error 2

@@ -1,22 +1,22 @@
 Determining if the pthread_create exist failed with the following output:
 Change Dir: /home/tapati/my_ws/build/my_control_pkg/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_d0212/fast"
-/usr/bin/make -f CMakeFiles/cmTC_d0212.dir/build.make CMakeFiles/cmTC_d0212.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_9b66e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9b66e.dir/build.make CMakeFiles/cmTC_9b66e.dir/build
 make[1]: Entering directory '/home/tapati/my_ws/build/my_control_pkg/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_d0212.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_d0212.dir/CheckSymbolExists.c.o   -c /home/tapati/my_ws/build/my_control_pkg/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_d0212
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d0212.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_d0212.dir/CheckSymbolExists.c.o  -o cmTC_d0212 
-CMakeFiles/cmTC_d0212.dir/CheckSymbolExists.c.o: In function `main':
+Building C object CMakeFiles/cmTC_9b66e.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_9b66e.dir/CheckSymbolExists.c.o   -c /home/tapati/my_ws/build/my_control_pkg/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_9b66e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9b66e.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_9b66e.dir/CheckSymbolExists.c.o  -o cmTC_9b66e 
+CMakeFiles/cmTC_9b66e.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_d0212.dir/build.make:97: recipe for target 'cmTC_d0212' failed
-make[1]: *** [cmTC_d0212] Error 1
+CMakeFiles/cmTC_9b66e.dir/build.make:97: recipe for target 'cmTC_9b66e' failed
+make[1]: *** [cmTC_9b66e] Error 1
 make[1]: Leaving directory '/home/tapati/my_ws/build/my_control_pkg/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_d0212/fast' failed
-make: *** [cmTC_d0212/fast] Error 2
+Makefile:126: recipe for target 'cmTC_9b66e/fast' failed
+make: *** [cmTC_9b66e/fast] Error 2
 
 File /home/tapati/my_ws/build/my_control_pkg/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
@@ -36,20 +36,20 @@ int main(int argc, char** argv)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/tapati/my_ws/build/my_control_pkg/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_860e9/fast"
-/usr/bin/make -f CMakeFiles/cmTC_860e9.dir/build.make CMakeFiles/cmTC_860e9.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_2932e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2932e.dir/build.make CMakeFiles/cmTC_2932e.dir/build
 make[1]: Entering directory '/home/tapati/my_ws/build/my_control_pkg/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_860e9.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_860e9.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
-Linking C executable cmTC_860e9
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_860e9.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_860e9.dir/CheckFunctionExists.c.o  -o cmTC_860e9 -lpthreads 
+Building C object CMakeFiles/cmTC_2932e.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_2932e.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_2932e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2932e.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_2932e.dir/CheckFunctionExists.c.o  -o cmTC_2932e -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_860e9.dir/build.make:97: recipe for target 'cmTC_860e9' failed
-make[1]: *** [cmTC_860e9] Error 1
+CMakeFiles/cmTC_2932e.dir/build.make:97: recipe for target 'cmTC_2932e' failed
+make[1]: *** [cmTC_2932e] Error 1
 make[1]: Leaving directory '/home/tapati/my_ws/build/my_control_pkg/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_860e9/fast' failed
-make: *** [cmTC_860e9/fast] Error 2
+Makefile:126: recipe for target 'cmTC_2932e/fast' failed
+make: *** [cmTC_2932e/fast] Error 2
 
 

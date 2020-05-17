@@ -1,1 +1,1 @@
-set(ORDERED_PATHS "/opt/ros/melodic/lib")
+set(ORDERED_PATHS "/home/tapati/ws_moveit/devel/.private/moveit_visual_tools/lib;/home/tapati/ws_moveit/devel/.private/rviz_visual_tools/lib;/home/tapati/ws_moveit/devel/.private/moveit_ros_planning/lib;/home/tapati/ws_moveit/devel/.private/moveit_core/lib;/home/tapati/ws_moveit/devel/.private/geometric_shapes/lib;/home/tapati/ws_moveit/devel/.private/moveit_ros_occupancy_map_monitor/lib;/opt/ros/melodic/lib")

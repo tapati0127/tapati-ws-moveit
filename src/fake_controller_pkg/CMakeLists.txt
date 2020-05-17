@@ -9,6 +9,7 @@ add_compile_options(-std=c++11)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   roscpp
+  moveit_visual_tools
 )
 
 ## System dependencies are found with CMake's conventions
@@ -103,7 +104,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES fake_controller_pkg
-CATKIN_DEPENDS roscpp
+CATKIN_DEPENDS roscpp moveit_visual_tools
 #  DEPENDS system_lib
 )
 

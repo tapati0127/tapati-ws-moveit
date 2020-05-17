@@ -1,0 +1,5 @@
+Symlinking /home/tapati/my_ws/devel/lib/pkgconfig/jointpath_cartesianpath_pkg.pc
+Symlinking /home/tapati/my_ws/devel/lib/jointpath_cartesianpath_pkg/joint_path_node
+Symlinking /home/tapati/my_ws/devel/lib/jointpath_cartesianpath_pkg/cartesian_path_node
+Symlinking /home/tapati/my_ws/devel/share/jointpath_cartesianpath_pkg/cmake/jointpath_cartesianpath_pkgConfig.cmake
+Symlinking /home/tapati/my_ws/devel/share/jointpath_cartesianpath_pkg/cmake/jointpath_cartesianpath_pkgConfig-version.cmake
