@@ -181,6 +181,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/ros/melodic/share/sensor_msgs/cmake/sensor_msgs-msg-extras.cmake"
   "/opt/ros/melodic/share/sensor_msgs/cmake/sensor_msgsConfig-version.cmake"
   "/opt/ros/melodic/share/sensor_msgs/cmake/sensor_msgsConfig.cmake"
+  "/opt/ros/melodic/share/serial/cmake/serialConfig-version.cmake"
+  "/opt/ros/melodic/share/serial/cmake/serialConfig.cmake"
   "/opt/ros/melodic/share/shape_msgs/cmake/shape_msgs-msg-extras.cmake"
   "/opt/ros/melodic/share/shape_msgs/cmake/shape_msgsConfig-version.cmake"
   "/opt/ros/melodic/share/shape_msgs/cmake/shape_msgsConfig.cmake"
@@ -302,6 +304,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/serial_controller_node.dir/DependInfo.cmake"
   "CMakeFiles/visual_node.dir/DependInfo.cmake"
   "CMakeFiles/fake_controller_node.dir/DependInfo.cmake"
   "CMakeFiles/octomap_msgs_generate_messages_eus.dir/DependInfo.cmake"

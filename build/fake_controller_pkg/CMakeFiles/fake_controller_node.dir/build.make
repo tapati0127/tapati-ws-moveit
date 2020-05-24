@@ -184,6 +184,7 @@ fake_controller_node_EXTERNAL_OBJECTS =
 /home/tapati/my_ws/devel/.private/fake_controller_pkg/lib/fake_controller_pkg/fake_controller_node: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
 /home/tapati/my_ws/devel/.private/fake_controller_pkg/lib/fake_controller_pkg/fake_controller_node: /usr/lib/x86_64-linux-gnu/libpthread.so
 /home/tapati/my_ws/devel/.private/fake_controller_pkg/lib/fake_controller_pkg/fake_controller_node: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+/home/tapati/my_ws/devel/.private/fake_controller_pkg/lib/fake_controller_pkg/fake_controller_node: /opt/ros/melodic/lib/libserial.so
 /home/tapati/my_ws/devel/.private/fake_controller_pkg/lib/fake_controller_pkg/fake_controller_node: CMakeFiles/fake_controller_node.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tapati/my_ws/build/fake_controller_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/tapati/my_ws/devel/.private/fake_controller_pkg/lib/fake_controller_pkg/fake_controller_node"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fake_controller_node.dir/link.txt --verbose=$(VERBOSE)

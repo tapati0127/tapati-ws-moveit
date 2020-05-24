@@ -1,0 +1,42 @@
+In file included from [01m[K/opt/ros/melodic/include/ros/serialization.h:37:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/publisher.h:34[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/node_handle.h:32[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/tapati/my_ws/src/fake_controller_pkg/src/serial_controller_node.cpp:1[m[K:
+/opt/ros/melodic/include/ros/message_traits.h: In instantiation of ‘[01m[Kstatic const char* ros::message_traits::MD5Sum<M>::value(const M&) [with M = moveit_msgs::DisplayRobotState_<std::allocator<void> >*][m[K’:
+[01m[K/opt/ros/melodic/include/ros/message_traits.h:255:102:[m[K   required from ‘[01m[Kconst char* ros::message_traits::md5sum(const M&) [with M = moveit_msgs::DisplayRobotState_<std::allocator<void> >*][m[K’
+[01m[K/opt/ros/melodic/include/ros/publisher.h:113:7:[m[K   required from ‘[01m[Kvoid ros::Publisher::publish(const M&) const [with M = moveit_msgs::DisplayRobotState_<std::allocator<void> >*][m[K’
+[01m[K/home/tapati/my_ws/src/fake_controller_pkg/src/serial_controller_node.cpp:42:36:[m[K   required from here
+[01m[K/opt/ros/melodic/include/ros/message_traits.h:126:14:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[K__getMD5Sum[m[K’ in ‘[01m[Km[m[K’, which is of pointer type ‘[01m[Kmoveit_msgs::DisplayRobotState_<std::allocator<void> >* const[m[K’ (maybe you meant to use ‘[01m[K->[m[K’ ?)
+     return [01;31m[Km.__getMD5Sum[m[K().c_str();
+            [01;31m[K~~^~~~~~~~~~~[m[K
+/opt/ros/melodic/include/ros/message_traits.h: In instantiation of ‘[01m[Kstatic const char* ros::message_traits::DataType<M>::value(const M&) [with M = moveit_msgs::DisplayRobotState_<std::allocator<void> >*][m[K’:
+[01m[K/opt/ros/melodic/include/ros/message_traits.h:264:104:[m[K   required from ‘[01m[Kconst char* ros::message_traits::datatype(const M&) [with M = moveit_msgs::DisplayRobotState_<std::allocator<void> >*][m[K’
+[01m[K/opt/ros/melodic/include/ros/publisher.h:113:7:[m[K   required from ‘[01m[Kvoid ros::Publisher::publish(const M&) const [with M = moveit_msgs::DisplayRobotState_<std::allocator<void> >*][m[K’
+[01m[K/home/tapati/my_ws/src/fake_controller_pkg/src/serial_controller_node.cpp:42:36:[m[K   required from here
+[01m[K/opt/ros/melodic/include/ros/message_traits.h:143:14:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[K__getDataType[m[K’ in ‘[01m[Km[m[K’, which is of pointer type ‘[01m[Kmoveit_msgs::DisplayRobotState_<std::allocator<void> >* const[m[K’ (maybe you meant to use ‘[01m[K->[m[K’ ?)
+     return [01;31m[Km.__getDataType[m[K().c_str();
+            [01;31m[K~~^~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/melodic/include/ros/publisher.h:34:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/node_handle.h:32[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/tapati/my_ws/src/fake_controller_pkg/src/serial_controller_node.cpp:1[m[K:
+/opt/ros/melodic/include/ros/serialization.h: In instantiation of ‘[01m[Kstatic uint32_t ros::serialization::Serializer<T>::serializedLength(typename boost::call_traits<T>::param_type) [with T = moveit_msgs::DisplayRobotState_<std::allocator<void> >*; uint32_t = unsigned int; typename boost::call_traits<T>::param_type = moveit_msgs::DisplayRobotState_<std::allocator<void> >* const][m[K’:
+[01m[K/opt/ros/melodic/include/ros/serialization.h:172:41:[m[K   required from ‘[01m[Kuint32_t ros::serialization::serializationLength(const T&) [with T = moveit_msgs::DisplayRobotState_<std::allocator<void> >*; uint32_t = unsigned int][m[K’
+[01m[K/opt/ros/melodic/include/ros/serialization.h:808:37:[m[K   required from ‘[01m[Kros::SerializedMessage ros::serialization::serializeMessage(const M&) [with M = moveit_msgs::DisplayRobotState_<std::allocator<void> >*][m[K’
+[01m[K/opt/ros/melodic/include/ros/publisher.h:119:26:[m[K   required from ‘[01m[Kvoid ros::Publisher::publish(const M&) const [with M = moveit_msgs::DisplayRobotState_<std::allocator<void> >*][m[K’
+[01m[K/home/tapati/my_ws/src/fake_controller_pkg/src/serial_controller_node.cpp:42:36:[m[K   required from here
+[01m[K/opt/ros/melodic/include/ros/serialization.h:144:14:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KserializationLength[m[K’ in ‘[01m[Kt[m[K’, which is of pointer type ‘[01m[Kboost::call_traits<moveit_msgs::DisplayRobotState_<std::allocator<void> >*>::param_type {aka moveit_msgs::DisplayRobotState_<std::allocator<void> >* const}[m[K’ (maybe you meant to use ‘[01m[K->[m[K’ ?)
+     return [01;31m[Kt.serializationLength[m[K();
+            [01;31m[K~~^~~~~~~~~~~~~~~~~~~[m[K
+/opt/ros/melodic/include/ros/serialization.h: In instantiation of ‘[01m[Kstatic void ros::serialization::Serializer<T>::write(Stream&, typename boost::call_traits<T>::param_type) [with Stream = ros::serialization::OStream; T = moveit_msgs::DisplayRobotState_<std::allocator<void> >*; typename boost::call_traits<T>::param_type = moveit_msgs::DisplayRobotState_<std::allocator<void> >* const][m[K’:
+[01m[K/opt/ros/melodic/include/ros/serialization.h:154:23:[m[K   required from ‘[01m[Kvoid ros::serialization::serialize(Stream&, const T&) [with T = moveit_msgs::DisplayRobotState_<std::allocator<void> >*; Stream = ros::serialization::OStream][m[K’
+[01m[K/opt/ros/melodic/include/ros/serialization.h:815:12:[m[K   required from ‘[01m[Kros::SerializedMessage ros::serialization::serializeMessage(const M&) [with M = moveit_msgs::DisplayRobotState_<std::allocator<void> >*][m[K’
+[01m[K/opt/ros/melodic/include/ros/publisher.h:119:26:[m[K   required from ‘[01m[Kvoid ros::Publisher::publish(const M&) const [with M = moveit_msgs::DisplayRobotState_<std::allocator<void> >*][m[K’
+[01m[K/home/tapati/my_ws/src/fake_controller_pkg/src/serial_controller_node.cpp:42:36:[m[K   required from here
+[01m[K/opt/ros/melodic/include/ros/serialization.h:127:7:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kserialize[m[K’ in ‘[01m[Kt[m[K’, which is of pointer type ‘[01m[Kboost::call_traits<moveit_msgs::DisplayRobotState_<std::allocator<void> >*>::param_type {aka moveit_msgs::DisplayRobotState_<std::allocator<void> >* const}[m[K’ (maybe you meant to use ‘[01m[K->[m[K’ ?)
+     [01;31m[Kt.serialize[m[K(stream.getData(), 0);
+     [01;31m[K~~^~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/serial_controller_node.dir/src/serial_controller_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/serial_controller_node.dir/all] Error 2
+make: *** [all] Error 2

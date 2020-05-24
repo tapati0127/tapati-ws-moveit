@@ -10,6 +10,7 @@ add_compile_options(-std=c++11)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   moveit_visual_tools
+  serial
 )
 
 ## System dependencies are found with CMake's conventions
@@ -104,7 +105,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES fake_controller_pkg
-CATKIN_DEPENDS roscpp moveit_visual_tools
+CATKIN_DEPENDS roscpp moveit_visual_tools serial
 #  DEPENDS system_lib
 )
 
@@ -134,6 +135,7 @@ include_directories(
 ## The recommended prefix ensures that target names across packages don't collide
 add_executable(fake_controller_node src/fake_controller_node.cpp)
 add_executable(visual_node src/visual_node.cpp)
+add_executable(serial_controller_node src/serial_controller_node.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -145,6 +147,8 @@ add_executable(visual_node src/visual_node.cpp)
 ## same as for the library above
  add_dependencies(fake_controller_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
  add_dependencies(visual_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+ add_dependencies(serial_controller_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+ 
 ## Specify libraries to link a library or executable target against
  target_link_libraries(fake_controller_node
    ${catkin_LIBRARIES}
@@ -152,6 +156,9 @@ add_executable(visual_node src/visual_node.cpp)
  target_link_libraries(visual_node
   ${catkin_LIBRARIES}
 )
+target_link_libraries(serial_controller_node
+  ${catkin_LIBRARIES}
+ )
 
 #############
 ## Install ##

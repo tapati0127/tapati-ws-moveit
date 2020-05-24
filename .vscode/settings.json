@@ -70,7 +70,9 @@
         "set": "cpp",
         "string": "cpp",
         "string_view": "cpp",
-        "geometry": "cpp"
+        "geometry": "cpp",
+        "future": "cpp",
+        "codecvt": "cpp"
     },
     "editor.quickSuggestions": true
 }

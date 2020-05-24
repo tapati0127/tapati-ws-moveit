@@ -3,6 +3,7 @@
 /home/tapati/my_ws/build/fake_controller_pkg/CMakeFiles/install.dir
 /home/tapati/my_ws/build/fake_controller_pkg/CMakeFiles/list_install_components.dir
 /home/tapati/my_ws/build/fake_controller_pkg/CMakeFiles/test.dir
+/home/tapati/my_ws/build/fake_controller_pkg/CMakeFiles/serial_controller_node.dir
 /home/tapati/my_ws/build/fake_controller_pkg/CMakeFiles/visual_node.dir
 /home/tapati/my_ws/build/fake_controller_pkg/CMakeFiles/fake_controller_node.dir
 /home/tapati/my_ws/build/fake_controller_pkg/CMakeFiles/octomap_msgs_generate_messages_eus.dir

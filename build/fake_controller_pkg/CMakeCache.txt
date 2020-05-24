@@ -44,7 +44,7 @@ CMAKE_AR:FILEPATH=/usr/bin/ar
 
 //Choose the type of build, options are: None(CMAKE_CXX_FLAGS or
 // CMAKE_C_FLAGS used) Debug Release RelWithDebInfo MinSizeRel.
-CMAKE_BUILD_TYPE:STRING=
+CMAKE_BUILD_TYPE:STRING=Debug
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
@@ -388,7 +388,7 @@ kdl_conversions_DIR:PATH=/opt/ros/melodic/share/kdl_conversions/cmake
 kdl_parser_DIR:PATH=/opt/ros/melodic/share/kdl_parser/cmake
 
 //Path to a library.
-lib:FILEPATH=/home/tapati/ws_moveit/devel/.private/moveit_ros_occupancy_map_monitor/lib/libmoveit_ros_occupancy_map_monitor.so
+lib:FILEPATH=/opt/ros/melodic/lib/libserial.so
 
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/melodic/share/message_filters/cmake
@@ -464,6 +464,9 @@ rviz_visual_tools_DIR:PATH=/home/tapati/ws_moveit/devel/share/rviz_visual_tools/
 
 //The directory containing a CMake configuration file for sensor_msgs.
 sensor_msgs_DIR:PATH=/opt/ros/melodic/share/sensor_msgs/cmake
+
+//The directory containing a CMake configuration file for serial.
+serial_DIR:PATH=/opt/ros/melodic/share/serial/cmake
 
 //The directory containing a CMake configuration file for shape_msgs.
 shape_msgs_DIR:PATH=/opt/ros/melodic/share/shape_msgs/cmake

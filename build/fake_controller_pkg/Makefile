@@ -168,6 +168,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named serial_controller_node
+
+# Build rule for target.
+serial_controller_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 serial_controller_node
+.PHONY : serial_controller_node
+
+# fast build rule for target.
+serial_controller_node/fast:
+	$(MAKE) -f CMakeFiles/serial_controller_node.dir/build.make CMakeFiles/serial_controller_node.dir/build
+.PHONY : serial_controller_node/fast
+
+#=============================================================================
 # Target rules for targets named visual_node
 
 # Build rule for target.
@@ -1468,6 +1481,33 @@ src/fake_controller_node.cpp.s:
 	$(MAKE) -f CMakeFiles/fake_controller_node.dir/build.make CMakeFiles/fake_controller_node.dir/src/fake_controller_node.cpp.s
 .PHONY : src/fake_controller_node.cpp.s
 
+src/serial_controller_node.o: src/serial_controller_node.cpp.o
+
+.PHONY : src/serial_controller_node.o
+
+# target to build an object file
+src/serial_controller_node.cpp.o:
+	$(MAKE) -f CMakeFiles/serial_controller_node.dir/build.make CMakeFiles/serial_controller_node.dir/src/serial_controller_node.cpp.o
+.PHONY : src/serial_controller_node.cpp.o
+
+src/serial_controller_node.i: src/serial_controller_node.cpp.i
+
+.PHONY : src/serial_controller_node.i
+
+# target to preprocess a source file
+src/serial_controller_node.cpp.i:
+	$(MAKE) -f CMakeFiles/serial_controller_node.dir/build.make CMakeFiles/serial_controller_node.dir/src/serial_controller_node.cpp.i
+.PHONY : src/serial_controller_node.cpp.i
+
+src/serial_controller_node.s: src/serial_controller_node.cpp.s
+
+.PHONY : src/serial_controller_node.s
+
+# target to generate assembly for a file
+src/serial_controller_node.cpp.s:
+	$(MAKE) -f CMakeFiles/serial_controller_node.dir/build.make CMakeFiles/serial_controller_node.dir/src/serial_controller_node.cpp.s
+.PHONY : src/serial_controller_node.cpp.s
+
 src/visual_node.o: src/visual_node.cpp.o
 
 .PHONY : src/visual_node.o
@@ -1506,6 +1546,7 @@ help:
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... test"
+	@echo "... serial_controller_node"
 	@echo "... visual_node"
 	@echo "... fake_controller_node"
 	@echo "... octomap_msgs_generate_messages_eus"
@@ -1609,6 +1650,9 @@ help:
 	@echo "... src/fake_controller_node.o"
 	@echo "... src/fake_controller_node.i"
 	@echo "... src/fake_controller_node.s"
+	@echo "... src/serial_controller_node.o"
+	@echo "... src/serial_controller_node.i"
+	@echo "... src/serial_controller_node.s"
 	@echo "... src/visual_node.o"
 	@echo "... src/visual_node.i"
 	@echo "... src/visual_node.s"
